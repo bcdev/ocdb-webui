@@ -1,0 +1,16 @@
+@import "../../node_modules/@blueprintjs/core/lib/css/blueprint.css";
+
+.nav-page-descr-group {
+    margin-left: 10px;
+}
+
+.nav-tab-group {
+    margin-left: 100px;
+}
+
+.nav-right-group {
+    margin-right: 10px;
+}
+
+.nav-right-group-search {
+}
