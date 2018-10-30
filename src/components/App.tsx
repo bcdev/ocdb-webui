@@ -10,8 +10,13 @@ interface AppState {
     vertical: boolean;
 }
 
-export class App extends React.PureComponent<any, AppState> {
-    constructor(props: any) {
+export interface AppProps {
+    navTabId?: string;
+    sideTabId?: string;
+}
+
+export class App extends React.PureComponent<AppProps, AppState> {
+    constructor(props: AppProps) {
         super(props);
         this.state =
             {
@@ -22,6 +27,8 @@ export class App extends React.PureComponent<any, AppState> {
     }
 
     public render() {
+        console.log(this.props);
+        console.log(this.state);
         return (
             <div className="App">
                 <NavigationBar/>
@@ -31,6 +38,7 @@ export class App extends React.PureComponent<any, AppState> {
                     key={this.state.vertical ? 'vertical' : 'horizontal'}
                     renderActiveTabPanelOnly={this.state.activePanelOnly}
                     vertical={this.state.vertical}
+                    selectedTabId={this.props.sideTabId}
                 >
                     <Tab id="rx" title="React" panel={<Hello/>}/>
                     <Tab id="ng" title="Angular" panel={<Hello/>}/>
