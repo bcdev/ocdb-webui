@@ -29,6 +29,6 @@
     "typescript": "^3.1.4"
   },
   "jest": {
-    "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js"
+    "setupTestFrameworkScriptFile": "./src/setupTests.js"
   }
 }
