@@ -7,15 +7,17 @@ interface NavigationBarState {
     animate: boolean;
 }
 
-export class NavigationBar extends React.PureComponent<any, NavigationBarState> {
+interface NavigationBarProps {
+    navTabId: string;
+    onNavTabChange?: (newNavTabId: string) => void;
+}
+
+export class NavigationBar extends React.PureComponent<NavigationBarProps, NavigationBarState> {
     constructor(props: any) {
         super(props);
         this.state = {
             animate: true
         }
-    }
-
-    handleNavBarTabChange() {
     }
 
     public render() {
@@ -29,7 +31,8 @@ export class NavigationBar extends React.PureComponent<any, NavigationBarState> 
                         animate={this.state.animate}
                         id="navbarTabs"
                         large={true}
-                        onChange={this.handleNavBarTabChange}
+                        selectedTabId={this.props.navTabId}
+                        onChange={this.props.onNavTabChange}
                     >
                         <Tab id="Home" title="Home"/>
                         <Tab id="About" title="About"/>

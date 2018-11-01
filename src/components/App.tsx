@@ -2,7 +2,7 @@ import * as React from 'react';
 import './App.css';
 import {Classes, InputGroup, Tab, Tabs} from '@blueprintjs/core';
 import Hello from '../containers/Hello';
-import {NavigationBar} from './NavigationBar';
+import NavigationBar from '../containers/NavigationBar';
 
 interface AppState {
     animate: boolean;
@@ -13,6 +13,7 @@ interface AppState {
 export interface AppProps {
     navTabId?: string;
     sideTabId?: string;
+    onSideTabChange?: (newSideTabId: string) => void;
 }
 
 export class App extends React.PureComponent<AppProps, AppState> {
@@ -27,8 +28,6 @@ export class App extends React.PureComponent<AppProps, AppState> {
     }
 
     public render() {
-        console.log(this.props);
-        console.log(this.state);
         return (
             <div className="App">
                 <NavigationBar/>
@@ -39,6 +38,7 @@ export class App extends React.PureComponent<AppProps, AppState> {
                     renderActiveTabPanelOnly={this.state.activePanelOnly}
                     vertical={this.state.vertical}
                     selectedTabId={this.props.sideTabId}
+                    onChange={this.props.onSideTabChange}
                 >
                     <Tab id="rx" title="React" panel={<Hello/>}/>
                     <Tab id="ng" title="Angular" panel={<Hello/>}/>

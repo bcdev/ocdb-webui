@@ -2,26 +2,22 @@ import * as React from 'react';
 import './Hello.css';
 
 export interface HelloProps {
-    name: string;
-    enthusiasmLevel: number;
+    languageName: string;
+    enthusiasmLevel?: number;
     onIncrement?: () => void;
     onDecrement?: () => void;
 }
 
 export default class Hello extends React.PureComponent<HelloProps, any> {
-    // if (enthusiasmLevel <= 0) {
-    //   throw new Error('You could be a little more enthusiastic. :D');
-    // }
-
     public render() {
-        if (this.props.enthusiasmLevel <= 0) {
+        if (this.props.enthusiasmLevel && this.props.enthusiasmLevel <= 0) {
             throw new Error('You could be a little more enthusiastic. :D');
         }
 
         return (
             <div className="hello">
                 <div className="greeting">
-                    Hello {name + getExclamationMarks(this.props.enthusiasmLevel)}
+                    Hello {this.props.languageName + getExclamationMarks(this.props.enthusiasmLevel)}
                 </div>
                 <div>
                     <button onClick={this.props.onDecrement}>-</button>
@@ -35,6 +31,9 @@ export default class Hello extends React.PureComponent<HelloProps, any> {
 
 // helpers
 
-function getExclamationMarks(numChars: number) {
+function getExclamationMarks(numChars: number | undefined) {
+    if(!numChars){
+        return numChars;
+    }
     return Array(numChars + 1).join('!');
 }

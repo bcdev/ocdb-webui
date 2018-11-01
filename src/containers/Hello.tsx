@@ -2,12 +2,12 @@ import Hello from '../components/Hello';
 import * as actions from '../actions/';
 import { connect } from 'react-redux';
 import {Dispatch} from 'redux';
-import {ControlState} from '../types/state';
+import {State} from '../types/state';
 
-export function mapStateToProps({ enthusiasmLevel, languageName }: ControlState) {
+export function mapStateToProps(state: State) {
     return {
-        enthusiasmLevel,
-        name: languageName,
+        enthusiasmLevel: state.control.enthusiasmLevel,
+        languageName: state.control.languageName,
     };
 }
 

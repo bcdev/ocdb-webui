@@ -1,12 +1,24 @@
 import {connect} from 'react-redux';
-import {ControlState} from '../types/state';
+import {State} from '../types/state';
 import App from '../components/App';
+import {Dispatch} from 'redux';
+import * as actions from '../actions';
 
-export function mapStateToProps({navTabId, sideTabId}: ControlState) {
+export function mapStateToProps(state: State) {
     return {
-        navTabId: navTabId,
-        sideTabId: sideTabId,
+        navTabId: state.control.navTabId,
+        sideTabId: state.control.sideTabId,
+        languageName: state.control.languageName,
+        enthusiasmLevel: state.control.enthusiasmLevel
     };
 }
 
-export default connect(mapStateToProps)(App);
+export function mapDispatchToProps(dispatch: Dispatch<actions.ControlStateAction>) {
+    return {
+        onSideTabChange: (newSideTabId: string) => {
+            dispatch(actions.updateSideTabId(newSideTabId))
+        }
+    };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

@@ -6,7 +6,6 @@ import {initialControlState} from '../types/initialStates';
 export function controlReducer(state: ControlState = initialControlState, action: ControlStateAction): ControlState {
     switch (action.type) {
         case INCREMENT_ENTHUSIASM:
-            console.log('shall increment enthusiasm', state);
             return {...state, enthusiasmLevel: state.enthusiasmLevel + 1};
         case DECREMENT_ENTHUSIASM:
             return {...state, enthusiasmLevel: Math.max(1, state.enthusiasmLevel - 1)};
