@@ -12,5 +12,24 @@
     margin-right: 10px;
 }
 
-.nav-right-group-search {
+.nav-container {
+    display: flex;
+    height: 50px;
+    background-color: rgba(28,90,128,0.3);
+}
+
+.nav-img {
+    flex-basis: 275px;
+    text-align: left;
+    padding-left: 15px;
+    margin: auto 0;
+}
+
+.nav-tabs {
+    margin: auto 0;
+}
+
+.nav-search {
+    margin: auto 0 auto auto;
+    padding-right: 15px;
 }
