@@ -1,5 +1,30 @@
 .file-search-panel {
-    color: white;
-    background-color: #293742;
+    color: black;
     height: 100%;
+    padding-right: 15px;
+}
+
+.file-search-panel-info{
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.general-search-collapsible{
+    margin-bottom: 15px;
+}
+
+.file-search-collapsible{
+    margin-bottom: 15px;
+}
+
+.collapsible-title {
+    display: flex;
+    background-color: #cfe5f2;
+    margin-bottom: 5px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.collapsible-title-icon {
+    margin-left: auto;
 }
