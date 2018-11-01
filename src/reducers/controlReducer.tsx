@@ -1,5 +1,11 @@
 import {ControlStateAction} from '../actions';
-import {INCREMENT_ENTHUSIASM, DECREMENT_ENTHUSIASM, UPDATE_NAVTAB_ID, UPDATE_SIDETAB_ID} from '../constants';
+import {
+    INCREMENT_ENTHUSIASM,
+    DECREMENT_ENTHUSIASM,
+    UPDATE_NAVTAB_ID,
+    UPDATE_ABOUTTAB_ID,
+    UPDATE_GETDATATAB_ID, UPDATE_UPLOADDATATAB_ID, UPDATE_WIKITAB_ID
+} from '../constants';
 import {ControlState} from '../types/state';
 import {initialControlState} from '../types/initialStates';
 
@@ -14,10 +20,25 @@ export function controlReducer(state: ControlState = initialControlState, action
                 ...state,
                 navTabId: action.newTabId
             };
-        case UPDATE_SIDETAB_ID:
+        case UPDATE_ABOUTTAB_ID:
             return {
                 ...state,
-                sideTabId: action.newTabId
+                selectedAboutTabId: action.newTabId
+            };
+        case UPDATE_GETDATATAB_ID:
+            return {
+                ...state,
+                selectedGetDataTabId: action.newTabId
+            };
+        case UPDATE_UPLOADDATATAB_ID:
+            return {
+                ...state,
+                selectedUploadDataTabId: action.newTabId
+            };
+        case UPDATE_WIKITAB_ID:
+            return {
+                ...state,
+                selectedWikiTabId: action.newTabId
             };
         default:
             return state;

@@ -3,6 +3,9 @@ import {ControlState} from './state';
 export const initialControlState: ControlState = {
     enthusiasmLevel: 1,
     languageName: 'TypeScript',
-    navTabId: 'Wiki',
-    sideTabId: 'mb'
+    navTabId: 'Home',
+    selectedAboutTabId: 'at-about',
+    selectedGetDataTabId: 'gd-fs',
+    selectedUploadDataTabId: 'ud-so',
+    selectedWikiTabId: 'w-home',
 };

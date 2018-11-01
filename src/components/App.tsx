@@ -1,8 +1,11 @@
 import * as React from 'react';
 import './App.css';
-import {Classes, InputGroup, Tab, Tabs} from '@blueprintjs/core';
-import Hello from '../containers/Hello';
 import NavigationBar from '../containers/NavigationBar';
+import AboutPage from '../containers/AboutPage';
+import GetDataPage from '../containers/GetDataPage';
+import UploadDataPage from '../containers/UploadDataPage';
+import {HomePage} from './HomePage';
+import WikiPage from '../containers/WikiPage';
 
 interface AppState {
     animate: boolean;
@@ -28,25 +31,26 @@ export class App extends React.PureComponent<AppProps, AppState> {
     }
 
     public render() {
+
+        let mainTabs;
+        if (this.props.navTabId == 'About') {
+            mainTabs = <AboutPage/>
+        } else if (this.props.navTabId == 'GetData') {
+            mainTabs = <GetDataPage/>
+        } else if (this.props.navTabId == 'UploadData') {
+            mainTabs = <UploadDataPage/>
+        } else if (this.props.navTabId == 'Wiki') {
+            mainTabs = <WikiPage/>
+        } else {
+            mainTabs = <HomePage/>
+        }
+
         return (
             <div className="App">
                 <NavigationBar/>
-                <Tabs
-                    animate={this.state.animate}
-                    id="TabsExample"
-                    key={this.state.vertical ? 'vertical' : 'horizontal'}
-                    renderActiveTabPanelOnly={this.state.activePanelOnly}
-                    vertical={this.state.vertical}
-                    selectedTabId={this.props.sideTabId}
-                    onChange={this.props.onSideTabChange}
-                >
-                    <Tab id="rx" title="React" panel={<Hello/>}/>
-                    <Tab id="ng" title="Angular" panel={<Hello/>}/>
-                    <Tab id="mb" title="Ember" panel={<Hello/>}/>
-                    <Tab id="bb" disabled={true} title="Backbone" panel={<Hello/>}/>
-                    <Tabs.Expander/>
-                    <InputGroup className={Classes.FILL} type="text" placeholder="Search..."/>
-                </Tabs>
+                <div className='main-tabs'>
+                    {mainTabs}
+                </div>
             </div>
         )
     }

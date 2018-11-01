@@ -6,6 +6,12 @@ export interface State {
 export interface ControlState {
     languageName: string;
     enthusiasmLevel: number;
+
     navTabId: string;
-    sideTabId: string;
+
+    // Side-tabs-related states
+    selectedAboutTabId: string;
+    selectedGetDataTabId: string;
+    selectedUploadDataTabId: string;
+    selectedWikiTabId: string;
 }

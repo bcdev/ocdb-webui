@@ -14,7 +14,8 @@ export interface UpdateNavTabId {
 }
 
 export interface UpdateSideTabId {
-    type: constants.UPDATE_SIDETAB_ID;
+    type: constants.UPDATE_ABOUTTAB_ID | constants.UPDATE_GETDATATAB_ID |
+        constants.UPDATE_UPLOADDATATAB_ID |constants.UPDATE_WIKITAB_ID;
     newTabId: string;
 }
 
@@ -42,9 +43,34 @@ export function updateNavTabId(newTabId: string): UpdateNavTabId {
     }
 }
 
-export function updateSideTabId(newTabId: string): UpdateSideTabId {
+//////////////////////////////
+// Side-tab-related actions //
+//////////////////////////////
+
+export function updateAboutTabId(newTabId: string): UpdateSideTabId {
     return {
-        type: constants.UPDATE_SIDETAB_ID,
+        type: constants.UPDATE_ABOUTTAB_ID,
+        newTabId: newTabId
+    }
+}
+
+export function updateGetDataTabId(newTabId: string): UpdateSideTabId {
+    return {
+        type: constants.UPDATE_GETDATATAB_ID,
+        newTabId: newTabId
+    }
+}
+
+export function updateUploadDataTabId(newTabId: string): UpdateSideTabId {
+    return {
+        type: constants.UPDATE_UPLOADDATATAB_ID,
+        newTabId: newTabId
+    }
+}
+
+export function updateWikiTabId(newTabId: string): UpdateSideTabId {
+    return {
+        type: constants.UPDATE_WIKITAB_ID,
         newTabId: newTabId
     }
 }
