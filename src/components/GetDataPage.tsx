@@ -1,13 +1,13 @@
 import * as React from 'react';
 import {Tab, Tabs} from '@blueprintjs/core';
 import './Styles.css';
-import {FileSearchPanel} from './FileSearchPanel';
 import {ValidationSearchPanel} from './ValidationSearchPanel';
 import {TimeSeriesToolPanel} from './TimeSeriesToolPanel';
 import {BrowseArchivePanel} from './BrowseArchivePanel';
 import {NomadPanel} from './NomadPanel';
 import {SoftwareDownloadPanel} from './SoftwareDownloadPanel';
 import {ListsPanel} from './ListsPanel';
+import FileSearchPanel from '../containers/FileSearchPanel';
 
 interface GetDataProps {
     selectedGetDataTabId: string;

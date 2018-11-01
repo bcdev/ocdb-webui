@@ -19,10 +19,15 @@ export interface UpdateSideTabId {
     newTabId: string;
 }
 
+export interface UpdateCollapsible {
+    type: constants.UPDATE_GENERAL_SEARCH_COLLAPSIBLE_STATE | constants.UPDATE_FILE_SEARCH_COLLAPSIBLE_STATE;
+}
+
 export type ControlStateAction = IncrementEnthusiasm |
     DecrementEnthusiasm |
     UpdateNavTabId |
-    UpdateSideTabId;
+    UpdateSideTabId |
+    UpdateCollapsible;
 
 export function incrementEnthusiasm(): IncrementEnthusiasm {
     return {
@@ -43,9 +48,9 @@ export function updateNavTabId(newTabId: string): UpdateNavTabId {
     }
 }
 
-//////////////////////////////
-// Side-tab-related actions //
-//////////////////////////////
+////////////////////////////////////
+// Side-tab-related actions START //
+////////////////////////////////////
 
 export function updateAboutTabId(newTabId: string): UpdateSideTabId {
     return {
@@ -74,3 +79,27 @@ export function updateWikiTabId(newTabId: string): UpdateSideTabId {
         newTabId: newTabId
     }
 }
+
+//////////////////////////////////
+// Side-tab-related actions END //
+//////////////////////////////////
+
+///////////////////////////////////////
+// Collapsible-related actions START //
+///////////////////////////////////////
+
+export function toggleGeneralSearchCollapsibleState(): UpdateCollapsible {
+    return {
+        type: constants.UPDATE_GENERAL_SEARCH_COLLAPSIBLE_STATE
+    }
+}
+
+export function toggleFileSearchCollapsibleState(): UpdateCollapsible {
+    return {
+        type: constants.UPDATE_FILE_SEARCH_COLLAPSIBLE_STATE
+    }
+}
+
+// //////////////////////////////////
+// Collapsible-related actions END //
+/////////////////////////////////////

@@ -14,4 +14,8 @@ export interface ControlState {
     selectedGetDataTabId: string;
     selectedUploadDataTabId: string;
     selectedWikiTabId: string;
+
+    // Collapsible-related states
+    isGeneralSearchCollapsibleOpen: boolean;
+    isFileSearchCollapsibleOpen: boolean;
 }

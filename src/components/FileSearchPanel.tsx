@@ -2,7 +2,14 @@ import * as React from 'react';
 import './FileSearchPanel.css';
 import {Button, Collapse, Icon} from '@blueprintjs/core';
 
-export class FileSearchPanel extends React.PureComponent<any, any> {
+interface FileSearchPanelProps {
+    isGeneralSearchCollapsibleOpen: boolean;
+    isFileSearchCollapsibleOpen: boolean;
+    onGeneralSearchCollapsibleChange: (newState: boolean) => void;
+    onFileSearchCollapsibleChange: (newState: boolean) => void;
+}
+
+export class FileSearchPanel extends React.PureComponent<FileSearchPanelProps, any> {
 
     public render() {
         return (
@@ -18,7 +25,7 @@ export class FileSearchPanel extends React.PureComponent<any, any> {
                         <div>General Search Parameters</div>
                         <Icon icon='chevron-down' className='collapsible-title-icon'/>
                     </div>
-                    <Collapse isOpen={true} className='general-search-collapsible'>
+                    <Collapse isOpen={this.props.isGeneralSearchCollapsibleOpen} className='general-search-collapsible'>
                         <div>Date input</div>
                         <div>Map display</div>
                         <div>Keyword search filters</div>
@@ -29,7 +36,7 @@ export class FileSearchPanel extends React.PureComponent<any, any> {
                         <div>File Search Parameters</div>
                         <Icon icon='chevron-down' className='collapsible-title-icon'/>
                     </div>
-                    <Collapse isOpen={true} className='file-search-collapsible'>
+                    <Collapse isOpen={this.props.isFileSearchCollapsibleOpen} className='file-search-collapsible'>
                         <div>Water depth</div>
                         <div>Wavelength options</div>
                         <div>Include Optically Shallow Measurements</div>
