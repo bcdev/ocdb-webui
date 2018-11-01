@@ -1,0 +1,7 @@
+@import "../../node_modules/@blueprintjs/core/lib/css/blueprint.css";
+
+.access-policy-panel {
+    color: aliceblue;
+    background-color: #251ddc;
+    height: 100%;
+}

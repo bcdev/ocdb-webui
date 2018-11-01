@@ -1,0 +1,7 @@
+@import "../../node_modules/@blueprintjs/core/lib/css/blueprint.css";
+
+.getting-started-panel {
+    color: aliceblue;
+    background-color: #394b59;
+    height: 100%;
+}

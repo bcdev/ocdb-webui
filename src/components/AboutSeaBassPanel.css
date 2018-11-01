@@ -1,0 +1,7 @@
+@import "../../node_modules/@blueprintjs/core/lib/css/blueprint.css";
+
+.about-seabass-panel {
+    color: aliceblue;
+    background-color: crimson;
+    height: 100%;
+}

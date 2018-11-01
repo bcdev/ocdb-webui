@@ -1,0 +1,7 @@
+@import "../../node_modules/@blueprintjs/core/lib/css/blueprint.css";
+
+.faq-panel {
+    color: aliceblue;
+    background-color: #49d128;
+    height: 100%;
+}
