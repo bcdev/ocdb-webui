@@ -2,10 +2,10 @@ import * as React from 'react';
 import './App.css';
 import NavigationBar from '../containers/NavigationBar';
 import AboutPage from '../containers/AboutPage';
-import GetDataPage from '../containers/GetDataPage';
-import UploadDataPage from '../containers/UploadDataPage';
 import {HomePage} from './HomePage';
-import WikiPage from '../containers/WikiPage';
+import SearchPage from '../containers/SearchPage';
+import IngestPage from '../containers/IngestPage';
+import HelpPage from '../containers/HelpPage';
 
 interface AppState {
     animate: boolean;
@@ -36,11 +36,11 @@ export class App extends React.PureComponent<AppProps, AppState> {
         if (this.props.navTabId == 'About') {
             mainTabs = <AboutPage/>
         } else if (this.props.navTabId == 'Search') {
-            mainTabs = <GetDataPage/>
+            mainTabs = <SearchPage/>
         } else if (this.props.navTabId == 'Ingest') {
-            mainTabs = <UploadDataPage/>
+            mainTabs = <IngestPage/>
         } else if (this.props.navTabId == 'Help') {
-            mainTabs = <WikiPage/>
+            mainTabs = <HelpPage/>
         } else {
             mainTabs = <HomePage/>
         }

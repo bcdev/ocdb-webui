@@ -2,7 +2,7 @@ import {connect} from 'react-redux';
 import {State} from '../types/state';
 import {Dispatch} from 'redux';
 import * as actions from '../actions';
-import {UploadDataPage} from '../components/UploadDataPage';
+import {IngestPage} from '../components/IngestPage';
 
 export function mapStateToProps(state: State) {
     return {
@@ -18,4 +18,4 @@ export function mapDispatchToProps(dispatch: Dispatch<actions.ControlStateAction
     };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(UploadDataPage);
+export default connect(mapStateToProps, mapDispatchToProps)(IngestPage);

@@ -2,20 +2,20 @@ import {connect} from 'react-redux';
 import {State} from '../types/state';
 import {Dispatch} from 'redux';
 import * as actions from '../actions';
-import {GetDataPage} from '../components/GetDataPage';
+import {HelpPage} from '../components/HelpPage';
 
 export function mapStateToProps(state: State) {
     return {
-        selectedGetDataTabId: state.control.selectedGetDataTabId
+        selectedWikiTabId: state.control.selectedWikiTabId
     };
 }
 
 export function mapDispatchToProps(dispatch: Dispatch<actions.ControlStateAction>) {
     return {
-        onGetDataTabChange: (newGetDataTabId: string) => {
-            dispatch(actions.updateGetDataTabId(newGetDataTabId))
+        onWikiTabChange: (newWikiTabId: string) => {
+            dispatch(actions.updateWikiTabId(newWikiTabId))
         }
     };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(GetDataPage);
+export default connect(mapStateToProps, mapDispatchToProps)(HelpPage);

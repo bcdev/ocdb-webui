@@ -1,14 +1,14 @@
 import * as React from 'react';
 import {Tab, Tabs} from '@blueprintjs/core';
 import Hello from '../containers/Hello';
-import './UploadDataPage.css';
+import './Styles.css';
 
-interface AboutPageProps {
+interface IngestPageProps {
     selectedUploadDataTabId: string;
     onUploadDataTabChange?: (newUploadDataTabId: string) => void;
 }
 
-export class UploadDataPage extends React.PureComponent<AboutPageProps, any> {
+export class IngestPage extends React.PureComponent<IngestPageProps, any> {
 
     public render() {
         return (

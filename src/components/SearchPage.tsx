@@ -9,12 +9,12 @@ import {SoftwareDownloadPanel} from './SoftwareDownloadPanel';
 import {ListsPanel} from './ListsPanel';
 import FileSearchPanel from '../containers/FileSearchPanel';
 
-interface GetDataProps {
+interface SearchPageProps {
     selectedGetDataTabId: string;
     onGetDataTabChange?: (newGetDataTabId: string) => void;
 }
 
-export class GetDataPage extends React.PureComponent<GetDataProps, any> {
+export class SearchPage extends React.PureComponent<SearchPageProps, any> {
 
     public render() {
         return (

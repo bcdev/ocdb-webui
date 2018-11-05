@@ -1,14 +1,14 @@
 import * as React from 'react';
 import {Tab, Tabs} from '@blueprintjs/core';
 import Hello from '../containers/Hello';
-import './UploadDataPage.css';
+import './Styles.css';
 
-interface WikiPageProps {
+interface HelpPageProps {
     selectedWikiTabId: string;
     onWikiTabChange?: (newWikiTabId: string) => void;
 }
 
-export class WikiPage extends React.PureComponent<WikiPageProps, any> {
+export class HelpPage extends React.PureComponent<HelpPageProps, any> {
 
     public render() {
         return (
