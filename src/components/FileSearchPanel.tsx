@@ -5,8 +5,8 @@ import {Button, Collapse, Icon} from '@blueprintjs/core';
 interface FileSearchPanelProps {
     isGeneralSearchCollapsibleOpen: boolean;
     isFileSearchCollapsibleOpen: boolean;
-    onGeneralSearchCollapsibleChange: (newState: boolean) => void;
-    onFileSearchCollapsibleChange: (newState: boolean) => void;
+    onGeneralSearchCollapsibleChange: () => void;
+    onFileSearchCollapsibleChange: () => void;
 }
 
 export class FileSearchPanel extends React.PureComponent<FileSearchPanelProps, any> {
@@ -23,7 +23,10 @@ export class FileSearchPanel extends React.PureComponent<FileSearchPanelProps, a
                 <div>
                     <div className='collapsible-title'>
                         <div>General Search Parameters</div>
-                        <Icon icon='chevron-down' className='collapsible-title-icon'/>
+                        <Icon icon='chevron-down'
+                              className='collapsible-title-icon'
+                              onClick={this.props.onGeneralSearchCollapsibleChange}
+                        />
                     </div>
                     <Collapse isOpen={this.props.isGeneralSearchCollapsibleOpen} className='general-search-collapsible'>
                         <div>Date input</div>
@@ -34,7 +37,10 @@ export class FileSearchPanel extends React.PureComponent<FileSearchPanelProps, a
                 <div>
                     <div className='collapsible-title'>
                         <div>File Search Parameters</div>
-                        <Icon icon='chevron-down' className='collapsible-title-icon'/>
+                        <Icon icon='chevron-down'
+                              className='collapsible-title-icon'
+                              onClick={this.props.onFileSearchCollapsibleChange}
+                        />
                     </div>
                     <Collapse isOpen={this.props.isFileSearchCollapsibleOpen} className='file-search-collapsible'>
                         <div>Water depth</div>

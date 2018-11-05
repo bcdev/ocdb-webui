@@ -20,7 +20,7 @@ export interface UpdateSideTabId {
 }
 
 export interface UpdateCollapsible {
-    type: constants.UPDATE_GENERAL_SEARCH_COLLAPSIBLE_STATE | constants.UPDATE_FILE_SEARCH_COLLAPSIBLE_STATE;
+    type: constants.TOGGLE_GENERAL_SEARCH_COLLAPSIBLE | constants.TOGGLE_FILE_SEARCH_COLLAPSIBLE;
 }
 
 export type ControlStateAction = IncrementEnthusiasm |
@@ -90,13 +90,13 @@ export function updateWikiTabId(newTabId: string): UpdateSideTabId {
 
 export function toggleGeneralSearchCollapsibleState(): UpdateCollapsible {
     return {
-        type: constants.UPDATE_GENERAL_SEARCH_COLLAPSIBLE_STATE
+        type: constants.TOGGLE_GENERAL_SEARCH_COLLAPSIBLE
     }
 }
 
 export function toggleFileSearchCollapsibleState(): UpdateCollapsible {
     return {
-        type: constants.UPDATE_FILE_SEARCH_COLLAPSIBLE_STATE
+        type: constants.TOGGLE_FILE_SEARCH_COLLAPSIBLE
     }
 }
 

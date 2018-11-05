@@ -4,7 +4,11 @@ import {
     DECREMENT_ENTHUSIASM,
     UPDATE_NAVTAB_ID,
     UPDATE_ABOUTTAB_ID,
-    UPDATE_GETDATATAB_ID, UPDATE_UPLOADDATATAB_ID, UPDATE_WIKITAB_ID
+    UPDATE_GETDATATAB_ID,
+    UPDATE_UPLOADDATATAB_ID,
+    UPDATE_WIKITAB_ID,
+    TOGGLE_GENERAL_SEARCH_COLLAPSIBLE,
+    TOGGLE_FILE_SEARCH_COLLAPSIBLE
 } from '../constants';
 import {ControlState} from '../types/state';
 import {initialControlState} from '../types/initialStates';
@@ -39,6 +43,16 @@ export function controlReducer(state: ControlState = initialControlState, action
             return {
                 ...state,
                 selectedWikiTabId: action.newTabId
+            };
+        case TOGGLE_GENERAL_SEARCH_COLLAPSIBLE:
+            return {
+                ...state,
+                isGeneralSearchCollapsibleOpen: !state.isGeneralSearchCollapsibleOpen
+            };
+        case TOGGLE_FILE_SEARCH_COLLAPSIBLE:
+            return {
+                ...state,
+                isFileSearchCollapsibleOpen: !state.isFileSearchCollapsibleOpen
             };
         default:
             return state;
