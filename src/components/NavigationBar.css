@@ -18,10 +18,19 @@
     background-color: rgb(207, 229, 242);
 }
 
-.nav-img {
+.nav-title {
     flex-basis: 275px;
-    text-align: left;
+    text-align: right;
     padding-left: 15px;
+    padding-right: 35px;
+    margin: auto 0;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.nav-img {
+    text-align: right;
+    padding-right: 15px;
     margin: auto 0;
 }
 
@@ -32,4 +41,8 @@
 .nav-search {
     margin: auto 0 auto auto;
     padding-right: 15px;
+}
+
+.bp3-tab-list > *:not(:last-child) {
+    margin-right: 30px;
 }

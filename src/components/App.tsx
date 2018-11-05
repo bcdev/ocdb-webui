@@ -35,11 +35,11 @@ export class App extends React.PureComponent<AppProps, AppState> {
         let mainTabs;
         if (this.props.navTabId == 'About') {
             mainTabs = <AboutPage/>
-        } else if (this.props.navTabId == 'GetData') {
+        } else if (this.props.navTabId == 'Search') {
             mainTabs = <GetDataPage/>
-        } else if (this.props.navTabId == 'UploadData') {
+        } else if (this.props.navTabId == 'Ingest') {
             mainTabs = <UploadDataPage/>
-        } else if (this.props.navTabId == 'Wiki') {
+        } else if (this.props.navTabId == 'Help') {
             mainTabs = <WikiPage/>
         } else {
             mainTabs = <HomePage/>
