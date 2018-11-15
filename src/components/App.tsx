@@ -2,7 +2,7 @@ import * as React from 'react';
 import './App.css';
 import NavigationBar from '../containers/NavigationBar';
 import AboutPage from '../containers/AboutPage';
-import {HomePage} from './HomePage';
+import {HomePage} from './Pages/HomePage';
 import SearchPage from '../containers/SearchPage';
 import IngestPage from '../containers/IngestPage';
 import HelpPage from '../containers/HelpPage';
