@@ -2,7 +2,7 @@ import {connect} from 'react-redux';
 import {State} from '../types/state';
 import {Dispatch} from 'redux';
 import * as actions from '../actions';
-import {NavigationBar} from '../components/NavigationBar';
+import {NavigationBar} from '../components/Pages/NavigationBar';
 
 export function mapStateToProps(state: State) {
     return {

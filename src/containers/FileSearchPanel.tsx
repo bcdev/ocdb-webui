@@ -2,7 +2,7 @@ import {connect} from 'react-redux';
 import {State} from '../types/state';
 import {Dispatch} from 'redux';
 import * as actions from '../actions';
-import {FileSearchPanel} from '../components/FileSearchPanel';
+import {FileSearchPanel} from '../components/Panels/FileSearchPanel';
 
 export function mapStateToProps(state: State) {
     return {

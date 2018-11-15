@@ -2,7 +2,7 @@ import {connect} from 'react-redux';
 import {State} from '../types/state';
 import {Dispatch} from 'redux';
 import * as actions from '../actions';
-import {IngestPage} from '../components/IngestPage';
+import {IngestPage} from '../components/Pages/IngestPage';
 
 export function mapStateToProps(state: State) {
     return {

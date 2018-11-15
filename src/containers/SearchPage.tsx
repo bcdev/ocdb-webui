@@ -2,7 +2,7 @@ import {connect} from 'react-redux';
 import {State} from '../types/state';
 import {Dispatch} from 'redux';
 import * as actions from '../actions';
-import {SearchPage} from '../components/SearchPage';
+import {SearchPage} from '../components/Pages/SearchPage';
 
 export function mapStateToProps(state: State) {
     return {
