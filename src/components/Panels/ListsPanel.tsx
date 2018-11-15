@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './Styles.css';
+import '../Styles.css';
 import './ListsPanel.css';
 
 export class ListsPanel extends React.PureComponent<any, any> {

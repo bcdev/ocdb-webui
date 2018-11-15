@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './Styles.css';
+import '../Styles.css';
 import './TimeSeriesToolPanel.css';
 
 export class TimeSeriesToolPanel extends React.PureComponent<any, any> {

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './Styles.css';
+import '../Styles.css';
 import './NomadPanel.css';
 
 export class NomadPanel extends React.PureComponent<any, any> {
