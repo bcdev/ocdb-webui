@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {Icon, Tab, Tabs} from '@blueprintjs/core';
-import logo from './eumetsat.png';
+import logo from '../eumetsat.png';
 import './NavigationBar.css';
 
 interface NavigationBarState {

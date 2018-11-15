@@ -1,10 +1,10 @@
 import * as React from 'react';
 import {Tab, Tabs} from '@blueprintjs/core';
 import './AboutPage.css';
-import './Styles.css';
-import {AboutSeaBassPanel} from './AboutSeaBassPanel';
-import {GettingStartedPanel} from './GettingStartedPanel';
-import {AccessPolicyPanel} from './AccessPolicyPanel';
+import '../Styles.css';
+import {AboutSeaBassPanel} from '../Panels/AboutSeaBassPanel';
+import {GettingStartedPanel} from '../Panels/GettingStartedPanel';
+import {AccessPolicyPanel} from '../Panels/AccessPolicyPanel';
 import {FaqPanel} from './FaqPanel';
 
 interface AboutPageProps {

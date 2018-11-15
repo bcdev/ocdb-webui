@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {Tab, Tabs} from '@blueprintjs/core';
-import Hello from '../containers/Hello';
-import './Styles.css';
+import Hello from '../../containers/Hello';
+import '../Styles.css';
 
 interface HelpPageProps {
     selectedWikiTabId: string;
