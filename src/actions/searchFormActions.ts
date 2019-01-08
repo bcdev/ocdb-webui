@@ -28,6 +28,7 @@ export function searchDatasets() {
     return (dispatch: Dispatch<UpdateFoundDatasets | MessageLogAction>, getState: () => AppState) => {
         const state = getState();
         const apiServerUrl = state.configState.apiServerUrl;
+        const apiServerAuth = state.configState.apiServerAuth;
         let datasetQuery = state.searchFormState.datasetQuery;
         const selectedBounds = state.searchMapState.selectedBounds;
         if (selectedBounds) {
@@ -38,7 +39,7 @@ export function searchDatasets() {
 
         datasetQuery = {...datasetQuery, geojson: true};
 
-        api.searchDatasets(apiServerUrl, datasetQuery)
+        api.searchDatasets(apiServerUrl, apiServerAuth, datasetQuery)
            .then((foundDatasets: QueryResult) => {
                console.log(foundDatasets);
                dispatch(updateFoundDatasets(foundDatasets));

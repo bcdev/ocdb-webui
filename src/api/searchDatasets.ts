@@ -1,4 +1,4 @@
-import { callJsonApi } from './callApi';
+import { callJsonApi, getRequestInit } from './callApi';
 import { QueryResult } from '../types/dataset';
 
 export type ProductMode = 'contains' | 'same_cruise' | 'dont_apply';
@@ -22,7 +22,7 @@ export interface DatasetQuery {
 
 type QueryComponent = [string, string];
 
-export function searchDatasets(apiServerUrl: string, datasetQuery: DatasetQuery): Promise<QueryResult> {
+export function searchDatasets(apiServerUrl: string, apiServerAuth: string, datasetQuery: DatasetQuery): Promise<QueryResult> {
     const queryComponents: QueryComponent[] = [];
     collectSearchExprComponent(datasetQuery, queryComponents);
     collectTimeComponent(datasetQuery, queryComponents);
@@ -32,7 +32,11 @@ export function searchDatasets(apiServerUrl: string, datasetQuery: DatasetQuery)
     collectWavelengthsTypeComponent(datasetQuery, queryComponents);
     collectOffsetCountComponents(datasetQuery, queryComponents);
     collectGeoJsonComponent(datasetQuery, queryComponents);
-    return callJsonApi<QueryResult>(apiServerUrl + '/datasets', queryComponents);
+    return callJsonApi<QueryResult>(
+        apiServerUrl + '/datasets',
+        queryComponents,
+        getRequestInit(apiServerAuth)
+    );
 }
 
 
