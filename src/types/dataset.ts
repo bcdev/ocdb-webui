@@ -81,6 +81,41 @@ export interface DatasetMetaData {
     units: string;
 }
 
+export function metaDatasetInit() {
+    return {
+        intidentifier_product_doi: '',
+        received: '',
+        investigators: '',
+        affiliations: '',
+        contact: '',
+        experiment: '',
+        cruise: '',
+        station: '',
+        data_file_name: '',
+        documents: '',
+        calibration_files: '',
+        instrument: '',
+        data_type: '',
+        data_status: '',
+        start_date: '',
+        end_date: '',
+        start_time: '',
+        end_time: '',
+        north_latitude: '',
+        south_latitude: '',
+        east_longitude: '',
+        west_longitude: '',
+        water_depth: '',
+        secchi_depth: '',
+        cloud_percent: '',
+        wind_speed: '',
+        wave_height: '',
+        missing: '',
+        delimiter: '',
+        units: '',
+    };
+}
+
 export interface Dataset {
     id: string;
     path: string;
@@ -93,7 +128,18 @@ export interface Dataset {
 }
 
 
-export interface SearchHistoryItem{
+export const datasetInit = {
+    id: '',
+    path: '',
+    metadata: metaDatasetInit(),
+    records: [],
+    longitudes: [],
+    latiudes: [],
+    attribures: [],
+    times: [],
+};
+
+export interface SearchHistoryItem {
     name: string;
     searchPath: string;
 }

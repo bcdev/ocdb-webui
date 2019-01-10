@@ -1,0 +1,262 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BBoxInput /> renders correctly 1`] = `
+<div>
+  <div
+    aria-describedby={undefined}
+    className="MuiFormControl-root-6 BBoxInput-searchField-1"
+  >
+    <label
+      className="MuiFormLabel-root-21 MuiFormLabel-filled-25 MuiInputLabel-root-10 MuiInputLabel-formControl-15 MuiInputLabel-animated-18 MuiInputLabel-shrink-17 MuiInputLabel-outlined-20"
+      data-shrink={true}
+      htmlFor="bbox_left"
+    >
+      Left
+    </label>
+    <div
+      className="MuiInputBase-root-41 MuiOutlinedInput-root-28 MuiInputBase-formControl-42"
+      onClick={[Function]}
+    >
+      <fieldset
+        aria-hidden={true}
+        className="MuiPrivateNotchedOutline-root-58 MuiOutlinedInput-notchedOutline-35"
+        style={
+          Object {
+            "paddingLeft": 8,
+          }
+        }
+      >
+        <legend
+          className="MuiPrivateNotchedOutline-legend-59"
+          style={
+            Object {
+              "width": 0,
+            }
+          }
+        >
+          <span
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "&#8203;",
+              }
+            }
+          />
+        </legend>
+      </fieldset>
+      <input
+        aria-invalid={false}
+        autoComplete={undefined}
+        autoFocus={undefined}
+        className="MuiInputBase-input-51 MuiOutlinedInput-input-36 MuiInputBase-inputType-54"
+        defaultValue={undefined}
+        disabled={false}
+        id="bbox_left"
+        name={undefined}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={undefined}
+        onKeyUp={undefined}
+        placeholder={undefined}
+        readOnly={undefined}
+        required={false}
+        rows={undefined}
+        type="number"
+        value={0}
+      />
+    </div>
+  </div>
+  <div
+    aria-describedby={undefined}
+    className="MuiFormControl-root-6 BBoxInput-searchField-1"
+  >
+    <label
+      className="MuiFormLabel-root-21 MuiFormLabel-filled-25 MuiInputLabel-root-10 MuiInputLabel-formControl-15 MuiInputLabel-animated-18 MuiInputLabel-shrink-17 MuiInputLabel-outlined-20"
+      data-shrink={true}
+      htmlFor="bbox_bottom"
+    >
+      Bottom
+    </label>
+    <div
+      className="MuiInputBase-root-41 MuiOutlinedInput-root-28 MuiInputBase-formControl-42"
+      onClick={[Function]}
+    >
+      <fieldset
+        aria-hidden={true}
+        className="MuiPrivateNotchedOutline-root-58 MuiOutlinedInput-notchedOutline-35"
+        style={
+          Object {
+            "paddingLeft": 8,
+          }
+        }
+      >
+        <legend
+          className="MuiPrivateNotchedOutline-legend-59"
+          style={
+            Object {
+              "width": 0,
+            }
+          }
+        >
+          <span
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "&#8203;",
+              }
+            }
+          />
+        </legend>
+      </fieldset>
+      <input
+        aria-invalid={false}
+        autoComplete={undefined}
+        autoFocus={undefined}
+        className="MuiInputBase-input-51 MuiOutlinedInput-input-36 MuiInputBase-inputType-54"
+        defaultValue={undefined}
+        disabled={false}
+        id="bbox_bottom"
+        name={undefined}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={undefined}
+        onKeyUp={undefined}
+        placeholder={undefined}
+        readOnly={undefined}
+        required={false}
+        rows={undefined}
+        type="number"
+        value={0}
+      />
+    </div>
+  </div>
+  <div
+    aria-describedby={undefined}
+    className="MuiFormControl-root-6 BBoxInput-searchField-1"
+  >
+    <label
+      className="MuiFormLabel-root-21 MuiFormLabel-filled-25 MuiInputLabel-root-10 MuiInputLabel-formControl-15 MuiInputLabel-animated-18 MuiInputLabel-shrink-17 MuiInputLabel-outlined-20"
+      data-shrink={true}
+      htmlFor="bbox_right"
+    >
+      Right
+    </label>
+    <div
+      className="MuiInputBase-root-41 MuiOutlinedInput-root-28 MuiInputBase-formControl-42"
+      onClick={[Function]}
+    >
+      <fieldset
+        aria-hidden={true}
+        className="MuiPrivateNotchedOutline-root-58 MuiOutlinedInput-notchedOutline-35"
+        style={
+          Object {
+            "paddingLeft": 8,
+          }
+        }
+      >
+        <legend
+          className="MuiPrivateNotchedOutline-legend-59"
+          style={
+            Object {
+              "width": 0,
+            }
+          }
+        >
+          <span
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "&#8203;",
+              }
+            }
+          />
+        </legend>
+      </fieldset>
+      <input
+        aria-invalid={false}
+        autoComplete={undefined}
+        autoFocus={undefined}
+        className="MuiInputBase-input-51 MuiOutlinedInput-input-36 MuiInputBase-inputType-54"
+        defaultValue={undefined}
+        disabled={false}
+        id="bbox_right"
+        name={undefined}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={undefined}
+        onKeyUp={undefined}
+        placeholder={undefined}
+        readOnly={undefined}
+        required={false}
+        rows={undefined}
+        type="number"
+        value={0}
+      />
+    </div>
+  </div>
+  <div
+    aria-describedby={undefined}
+    className="MuiFormControl-root-6 BBoxInput-searchField-1"
+  >
+    <label
+      className="MuiFormLabel-root-21 MuiFormLabel-filled-25 MuiInputLabel-root-10 MuiInputLabel-formControl-15 MuiInputLabel-animated-18 MuiInputLabel-shrink-17 MuiInputLabel-outlined-20"
+      data-shrink={true}
+      htmlFor="bbox_top"
+    >
+      Top
+    </label>
+    <div
+      className="MuiInputBase-root-41 MuiOutlinedInput-root-28 MuiInputBase-formControl-42"
+      onClick={[Function]}
+    >
+      <fieldset
+        aria-hidden={true}
+        className="MuiPrivateNotchedOutline-root-58 MuiOutlinedInput-notchedOutline-35"
+        style={
+          Object {
+            "paddingLeft": 8,
+          }
+        }
+      >
+        <legend
+          className="MuiPrivateNotchedOutline-legend-59"
+          style={
+            Object {
+              "width": 0,
+            }
+          }
+        >
+          <span
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "&#8203;",
+              }
+            }
+          />
+        </legend>
+      </fieldset>
+      <input
+        aria-invalid={false}
+        autoComplete={undefined}
+        autoFocus={undefined}
+        className="MuiInputBase-input-51 MuiOutlinedInput-input-36 MuiInputBase-inputType-54"
+        defaultValue={undefined}
+        disabled={false}
+        id="bbox_top"
+        name={undefined}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={undefined}
+        onKeyUp={undefined}
+        placeholder={undefined}
+        readOnly={undefined}
+        required={false}
+        rows={undefined}
+        type="number"
+        value={0}
+      />
+    </div>
+  </div>
+</div>
+`;
