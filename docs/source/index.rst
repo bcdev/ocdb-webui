@@ -18,17 +18,11 @@ The Copernicus OCDB_
    ocdb-api-cli
    ocdb-search
    ocdb-validation-rules
-   ocdb-valication-config
+   ocdb-validation-config
    ocdb-rest
-   ocdb-data-access-policy
    ocdb-tech-docs
    ocdb-tech-deployment
-   ocdb-training
-   ocdb_training_ilaria
-   ocdb_training_ewa
-   ocdb_training_david
-
-
+   ocdb-data-access-policy
 
 
 .. image:: static/logos.png
